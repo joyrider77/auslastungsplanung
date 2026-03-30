@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.98 0 0;
+    --foreground: 0.18 0.012 252;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.012 252;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.012 252;
+    --primary: 0.245 0.022 252;
+    --primary-foreground: 0.985 0 0;
+    --secondary: 0.96 0.005 252;
+    --secondary-foreground: 0.245 0.022 252;
+    --muted: 0.96 0.005 252;
+    --muted-foreground: 0.5 0.01 252;
+    --accent: 0.96 0.005 252;
+    --accent-foreground: 0.245 0.022 252;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.91 0.008 252;
+    --input: 0.91 0.008 252;
+    --ring: 0.5 0.02 252;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.18 0.012 252;
+    --sidebar-primary: 0.245 0.022 252;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.96 0.005 252;
+    --sidebar-accent-foreground: 0.245 0.022 252;
+    --sidebar-border: 0.91 0.008 252;
+    --sidebar-ring: 0.5 0.02 252;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  /* Custom scrollbar for grid */
+  .grid-scroll::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  .grid-scroll::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  .grid-scroll::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  .grid-scroll::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    .print-full {
+      width: 100% !important;
+      overflow: visible !important;
+    }
+  }
+}
